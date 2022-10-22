@@ -1,5 +1,6 @@
 import CardBox from "./components/CardBox";
 import ChainsList from "./components/ChainsList";
+import ConnectBtn from "./components/ConnectBtn";
 
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
@@ -27,11 +28,12 @@ export default function Home() {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
-        <div className="w-[100%] h-[100vh] flex justify-center items-center ">
+        <div className="w-[100%] h-[100vh] flex justify-center items-center bg-[#fefefe]">
           <div>
             <ChainsList />
             <CardBox />
           </div>
+          <ConnectBtn />
         </div>
       </RainbowKitProvider>
     </WagmiConfig>
